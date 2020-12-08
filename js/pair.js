@@ -1,3 +1,37 @@
+
+
+const minute = document.querySelector('.minute');
+const second = document.querySelector('.second');
+
+let seconds = 0;
+
+let hasGameStarted = 0;
+
+const update = (num) => {
+    return num < 10 ? `0${num}` : `${num}`;
+};
+
+function measureTime() {
+    if (hasGameStarted === 0) {
+        hasGameStarted = 1;
+        const startInterval = setInterval(function() {
+            seconds++;
+            minute.textContent = update(Math.floor(seconds / 60));
+            second.textContent = update(seconds % 60);
+            if (flipped.length == 10) clearInterval(startInterval);
+        }, 1000);
+    };
+};
+
+function startInterval() {
+    setInterval(intervalTime, 1000);
+};
+
+
+
+
+
+
 (function () {
   // Kártya ikonok elhelyezése 
   const icons = [
