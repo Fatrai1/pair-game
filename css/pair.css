@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(71, 167, 252);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.head {
+  margin: 0 auto;
+  text-align: center;
+}
+.cards__container {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1rem 0 1rem;
+}
+.card {
+  border-radius: 5px;
+  cursor: pointer;
+  height: 170px;
+  max-width: 120px;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+  /* align-items: center;
+  justify-content: center; */
+}
+.col-12 {
+  text-align: center;
+
+}
+.card__back {
+  background-color: aqua;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(0deg);
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+/* .card__front {
+  display: flex;
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+} */
+
+.card__front i {
+  font-size: 75px;
+  
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.col-2.card.found {
+  transform: rotateY(180deg);
+}
+
+.card__back img {
+  max-width: 100%;
+}
+.card__front, .card__back {
+  backface-visibility: hidden;
+
+}
