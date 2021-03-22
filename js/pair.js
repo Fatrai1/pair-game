@@ -48,7 +48,7 @@ function startInterval() {
   
   const getOneCard = (icon) => {
       const div = document.createElement('div');
-      div.className = 'card';
+      div.classList.add('col-2', 'card');
       div.innerHTML = `<div class="card__front">
               <i class="fa ${icon}"></i>
           </div>
@@ -84,8 +84,8 @@ function startInterval() {
   // Show cards.
   const iconArray = icons.concat(icons);
   shuffle(iconArray);
-  const row1 = document.querySelector('.cards__container .row:first-child');
-  const row2 = document.querySelector('.cards__container .row:last-child');
+  const row1 = document.querySelector('.row:nth-child(2)');
+  const row2 = document.querySelector('.row:nth-child(3)');
   let i = 0;
   for (const icon of iconArray) {
       i++;
@@ -101,7 +101,7 @@ function startInterval() {
   const cardClick = (ev) => {
       if (blockClicks) {
           return;
-      }
+        }
 
       ev.currentTarget.classList.toggle('flipped');
       const flippedCards = document.querySelectorAll('.card.flipped');
@@ -113,12 +113,9 @@ function startInterval() {
               document.querySelectorAll('.card').forEach( card => {
                   card.classList.remove('flipped');
               });
-          }, 2000);
-
+          }, 1500);
           checkPair();
       }
-
-
   };
 
   const cards = document.querySelectorAll('.card');
