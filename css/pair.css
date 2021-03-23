@@ -1,16 +1,22 @@
 body { 
-  background-color: rgb(153, 153, 255);
+  background-color: rgb(201, 201, 201);
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .card {
   height: 150px;
   max-width: 100px;
+  margin-right: 1rem;
   padding: 0;
   background-color: transparent;
   border: none;
   transition: transform .5s;
   transform-style: preserve-3d;
 }
-
 .card__front, .card__back {
   position: absolute;
   width: 100%;
